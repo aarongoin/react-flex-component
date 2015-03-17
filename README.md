@@ -46,18 +46,18 @@ React.render(<FlexableLayout />, document.body);
 Renders a flexbox container.
 
 Props:
-column
-nowrap
-justifyContent
-alignItems
+- column
+- nowrap
+- justifyContent
+- alignItems
 
 ### Item
 
 Renders a flexbox item.
 
 Props:
-flex
-alignSelf
+- flex
+- alignSelf
 
 ## Contributors
 
