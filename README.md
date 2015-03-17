@@ -36,6 +36,9 @@ var React = require('react'),
 		}
 	});
 
+React.render(<FlexableLayout />, document.body);
+```
+
 ## Components
 
 ### Box
