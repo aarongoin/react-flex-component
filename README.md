@@ -48,20 +48,20 @@ Renders a flexbox container.
 Props:
 - column (boolean) <Box column> creates column layout. <Box> defaults to row layout.
 - nowrap (boolean) <Box nowrap> prevents wrapping, default is to wrap
-- justifyContent (string) See MDN's justify-content [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content#Syntax) for valid values.
-- alignItems (string) See MDN's align-items [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items#Syntax) for valid values.
+- justifyContent (string) See MDN's justify-content [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content#Syntax){:target="_blank"} for valid values.
+- alignItems (string) See MDN's align-items [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items#Syntax){:target="_blank"} for valid values.
 
 ### Item
 
 Renders a flexbox item.
 
 Props:
-- flex (string) See MDN's flex [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) for details and valid values.
-- alignSelf (string) See MDN's align-self [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#Syntax) for valid values.
+- flex (string) See MDN's flex [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/flex){:target="_blank"} for details and valid values.
+- alignSelf (string) See MDN's align-self [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#Syntax){:target="_blank"} for valid values.
 
 ## More
 
-For more info on CSS flexbox check out MDN's [docs](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
+For more info on CSS flexbox check out MDN's [docs](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes){:target="_blank"}.
 
 ## Contributors
 
@@ -69,4 +69,4 @@ Aaron Goin
 
 ## License
 
-This content is released under the [MIT License](https://github.com/aarongoin/react-flex-component/LICENSE.txt).
+This content is released under the MIT License.
