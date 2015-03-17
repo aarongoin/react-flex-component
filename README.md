@@ -22,7 +22,7 @@ var React = require('react'),
 			return (
 				<Box column justifyContent='flex-end'>
 					<Item>
-						<Box row nowrap>
+						<Box nowrap>
 							<Item>Read me</Item>
 							<Item>from left</Item>
 							<Item>to right.</Item>
@@ -46,18 +46,22 @@ React.render(<FlexableLayout />, document.body);
 Renders a flexbox container.
 
 Props:
-- column
-- nowrap
-- justifyContent
-- alignItems
+- column (boolean) <Box column> creates column layout. <Box> defaults to row layout.
+- nowrap (boolean) <Box nowrap> prevents wrapping, default is to wrap
+- justifyContent (string) See MDN's justify-content [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content#Syntax) for valid values.
+- alignItems (string) See MDN's align-items [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items#Syntax) for valid values.
 
 ### Item
 
 Renders a flexbox item.
 
 Props:
-- flex
-- alignSelf
+- flex (string) See MDN's flex [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) for details and valid values.
+- alignSelf (string) See MDN's align-self [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#Syntax) for valid values.
+
+## More
+
+For more info on CSS flexbox check out MDN's [docs](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes).
 
 ## Contributors
 
