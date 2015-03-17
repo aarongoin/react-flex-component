@@ -1,0 +1,28 @@
+{
+  "name": "react-flex-component",
+  "version": "0.8.0",
+  "description": "css flexbox component for ReactJS",
+  "main": "flex.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarongoin/react-flex-component"
+  },
+  "keywords": [
+    "react-component",
+    "react",
+    "flexbox",
+    "css"
+  ],
+  "author": "Aaron Goin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aarongoin/react-flex-component/issues"
+  },
+  "homepage": "https://github.com/aarongoin/react-flex-component"
+}
