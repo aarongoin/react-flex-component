@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example": "jsx -x jsx example/ example/ && browserify example/source.js -o example/build.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/aarongoin/react-flex-component/issues"
   },
-  "homepage": "https://github.com/aarongoin/react-flex-component"
+  "homepage": "https://github.com/aarongoin/react-flex-component",
+  "dependencies": {
+    "browserify": "^9.0.3",
+    "react": "^0.13.1",
+    "react-tools": "^0.13.1"
+  }
 }
