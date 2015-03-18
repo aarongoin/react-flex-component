@@ -38,6 +38,13 @@ var React = require('react'),
 
 React.render(<FlexableLayout />, document.body);
 ```
+To build the example in the package:
+```sh
+npm install
+
+npm run example
+```
+And then simply open example/index.html to run.
 
 ## Components
 
