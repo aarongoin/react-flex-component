@@ -5,19 +5,19 @@ var React = require('react'),
 Box = React.createClass({displayName: "Box",
 	getDefaultProps: function() {
 		return {
-			prefix: (navigator.userAgent.indexOf('AppleWebkit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
+			prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
 			justifyContent: 'flex-start',
 			alignItems: 'stretch'
 		};
 	},
 	getInitialState: function() {
 		return {
-			style: { display: (this.props.prefix === 'WebkitF') ? '-webkit-flex' : (this.props.prefix === 'msF') ? '-ms-flex' : 'flex' }
+			style: { display: (this.props.prefix === 'Webkit') ? '-webkit-flex' : (this.props.prefix === 'ms') ? '-ms-flex' : 'flex' }
 		};
 	},
 	render: function() {
 		var props = this.props,
-			prefix = p.prefix,
+			prefix = props.prefix,
 			style = this.state.style;
 		// update style according to box props
 		// flex-direction
@@ -40,7 +40,7 @@ Box = React.createClass({displayName: "Box",
 Item = React.createClass({displayName: "Item",
 	getDefaultProps: function() {
 		return {
-			prefix: (navigator.userAgent.indexOf('AppleWebkit') > -1) ? 'WebkitF' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'msF' : 'f',
+			prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
 			flex: '0 1 auto',
 			alignSelf: 'auto'
 		};
@@ -52,11 +52,11 @@ Item = React.createClass({displayName: "Item",
 	},
 	render: function() {
 		var props = this.props,
-			prefix = p.prefix,
+			prefix = props.prefix,
 			style = this.state.style;
 		// update style according to item flex prop
 		// flex
-		style[prefix + 'lex'] = props.flex;
+		style[prefix ? prefix + 'Flex' : 'flex'] = props.flex;
 		// align-self
 		style[(prefix && prefix !== 'ms') ? prefix + 'AlignSelf' : 'alignSelf'] = props.alignSelf;
 
