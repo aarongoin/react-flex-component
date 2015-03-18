@@ -1,6 +1,6 @@
 {
   "name": "react-flex-component",
-  "version": "0.8.3",
+  "version": "0.8.7",
   "description": "css flexbox component for ReactJS",
   "main": "flex.js",
   "directories": {
