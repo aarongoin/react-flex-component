@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/aarongoin/react-flex-component",
   "dependencies": {
-    "react": "^0.12.2",
+    "react": "^0.12.2"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
