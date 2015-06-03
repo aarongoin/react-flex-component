@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "example": "jsx -x jsx example/ example/ && browserify example/source.js -o example/build.js"
+    "example": "browserify example/source.jsx -o example/build.js -t [ babelify --optional es7.classProperties ]"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/aarongoin/react-flex-component",
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.13.3"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "react-tools": "^0.12.2"
+    "babelify": "^6.1.2",
+    "browserify": "^9.0.3"
   }
 }
