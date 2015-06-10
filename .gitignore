@@ -3,4 +3,3 @@ node_modules
 build.js
 source.js
 *.log
-/lib
