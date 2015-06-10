@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "babel flex.js --out-dir lib --optional es7.classProperties",
+    "prepublish": "npm run build",
     "example": "browserify example/source.jsx -o example/build.js -t [ babelify --optional es7.classProperties ]"
   },
   "repository": {
