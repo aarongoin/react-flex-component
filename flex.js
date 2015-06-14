@@ -1,21 +1,20 @@
-var React = require('react'),
-	Box,
-	Item;
+import React from 'react';
 
-Box = React.createClass({displayName: "Box",
-	getDefaultProps: function() {
-		return {
-			prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
-			justifyContent: 'flex-start',
-			alignItems: 'stretch'
-		};
-	},
-	getInitialState: function() {
-		return {
+class Box extends React.Component {
+	static defaultProps = {
+		prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
+		justifyContent: 'flex-start',
+		alignItems: 'stretch'
+	};
+
+	constructor(props) {
+		super(props);
+		this.state = {
 			style: { display: (this.props.prefix === 'Webkit') ? '-webkit-flex' : (this.props.prefix === 'ms') ? '-ms-flex' : 'flex' }
 		};
-	},
-	render: function() {
+	}
+
+	render() {
 		var props = this.props,
 			prefix = props.prefix,
 			style = this.state.style;
@@ -30,27 +29,28 @@ Box = React.createClass({displayName: "Box",
 		style[(prefix && prefix !== 'ms') ? prefix + 'AlignItems' : 'alignItems'] = props.alignItems;
 
 		return (
-			React.createElement("div", {style: style}, 
-				props.children
-			)
+			<div style={style}>
+				{this.props.children}
+			</div>
 		);
 	}
-});
+}
 
-Item = React.createClass({displayName: "Item",
-	getDefaultProps: function() {
-		return {
-			prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
-			flex: '0 1 auto',
-			alignSelf: 'auto'
-		};
-	},
-	getInitialState: function() {
-		return {
+class Item extends React.Component {
+	static defaultProps = {
+		prefix: (navigator.userAgent.indexOf('AppleWebKit') > -1) ? 'Webkit' : (navigator.userAgent.indexOf('MSIE') > -1) ? 'ms' : null,
+		flex: '0 1 auto',
+		alignSelf: 'auto'
+	};
+
+	constructor(props) {
+		super(props);
+		this.state = {
 			style: {}
 		};
-	},
-	render: function() {
+	}
+
+	render() {
 		var props = this.props,
 			prefix = props.prefix,
 			style = this.state.style;
@@ -61,11 +61,11 @@ Item = React.createClass({displayName: "Item",
 		style[(prefix && prefix !== 'ms') ? prefix + 'AlignSelf' : 'alignSelf'] = props.alignSelf;
 
 		return (
-			React.createElement("div", {style: style}, 
-				props.children
-			)
+			<div style={style}>
+				{this.props.children}
+			</div>
 		);
 	}
-});
+}
 
-module.exports = {Box: Box, Item: Item};
+export default {Box: Box, Item: Item};

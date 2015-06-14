@@ -2,12 +2,17 @@
   "name": "react-flex-component",
   "version": "0.8.8",
   "description": "css flexbox component for ReactJS",
-  "main": "flex.js",
+  "main": "lib/flex.js",
+  "files": [
+    "lib"
+  ],
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "example": "jsx -x jsx example/ example/ && browserify example/source.js -o example/build.js"
+    "build": "babel flex.js --out-dir lib --optional es7.classProperties",
+    "prepublish": "npm run build",
+    "example": "browserify example/source.jsx -o example/build.js -t [ babelify --optional es7.classProperties ]"
   },
   "repository": {
     "type": "git",
@@ -26,10 +31,11 @@
   },
   "homepage": "https://github.com/aarongoin/react-flex-component",
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.13.3"
   },
   "devDependencies": {
-    "browserify": "^9.0.3",
-    "react-tools": "^0.12.2"
+    "babel": "^5.5.5",
+    "babelify": "^6.1.2",
+    "browserify": "^9.0.3"
   }
 }
