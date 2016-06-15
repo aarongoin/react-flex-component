@@ -16,6 +16,7 @@ class Box extends React.Component {
 
 	render() {
 		var props = this.props,
+			styles = props.style || {},
 			prefix = props.prefix,
 			style = this.state.style;
 		// update style according to box props
@@ -28,8 +29,10 @@ class Box extends React.Component {
 		// align-items
 		style[(prefix && prefix !== 'ms') ? prefix + 'AlignItems' : 'alignItems'] = props.alignItems;
 
+		styles = Object.assign(styles, style);
+
 		return (
-			<div style={style}>
+			<div style={styles}>
 				{this.props.children}
 			</div>
 		);
@@ -53,6 +56,7 @@ class Item extends React.Component {
 	render() {
 		var props = this.props,
 			prefix = props.prefix,
+			styles = props.style || {},
 			style = this.state.style;
 		// update style according to item flex prop
 		// flex
@@ -60,8 +64,10 @@ class Item extends React.Component {
 		// align-self
 		style[(prefix && prefix !== 'ms') ? prefix + 'AlignSelf' : 'alignSelf'] = props.alignSelf;
 
+		styles = Object.assign(styles, style);
+
 		return (
-			<div style={style}>
+			<div style={styles}>
 				{this.props.children}
 			</div>
 		);
