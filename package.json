@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/aarongoin/react-flex-component",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^15.0.2"
   },
   "devDependencies": {
     "babel": "^5.5.5",
